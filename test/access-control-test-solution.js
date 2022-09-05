@@ -5,7 +5,7 @@ describe("Access Control", () => {
   let deployer, attacker, user;
 
   beforeEach(async function () {
-    [deployer, attacker, user] = await ethers.getSigners();
+    [deployer, attacker, user] = await ethers.getSigners();  //async 
 
     const AgreedPrice = await ethers.getContractFactory("AgreedPrice", deployer);
     this.agreedPrice = await AgreedPrice.deploy(100);
